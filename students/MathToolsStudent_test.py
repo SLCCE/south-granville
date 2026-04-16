@@ -6,7 +6,7 @@
 '''
 
 import unittest
-from Students.MathToolsStudent import MathToolsStudent as MathTools
+from students.MathToolsStudent import MathToolsStudent as MathTools
 
 
 class TestAddition(unittest.TestCase):
