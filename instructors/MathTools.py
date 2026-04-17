@@ -22,27 +22,23 @@ class MathTools:
         self.factorList = []
     
     # addition of two or more inputted values
-    def addition(self, a, b, *args):
-        self.sum = a + b + sum(args)
+    def addition(self, a, b):
+        self.sum = a + b
         return self.sum
     
     # subtraction
-    def subtraction(self, a, b, *args):
-        self.difference = a - b - sum(args)
+    def subtraction(self, a, b):
+        self.difference = a - b
         return self.difference
     
     # multiplication
-    def multiplication(self, a, b, *args):
+    def multiplication(self, a, b):
         self.product = a * b
-        for arg in args:
-            self.product *= arg
         return self.product
     
     # division
-    def division(self, a, b, *args):
+    def division(self, a, b):
         self.quotient = a / b
-        for arg in args:
-            self.quotient /= arg
         return self.quotient
     
     # add all values in a list, using a for loop
