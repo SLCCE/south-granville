@@ -17,9 +17,6 @@ class TestAddition(unittest.TestCase):
     def test_two_positive_numbers(self):
         self.assertEqual(self.mt.addition(3, 4), 7)
 
-    def test_more_than_two_numbers(self):
-        self.assertEqual(self.mt.addition(1, 2, 3, 4, 5), 15)
-
     def test_negative_numbers(self):
         self.assertEqual(self.mt.addition(-3, -4), -7)
 
@@ -42,9 +39,6 @@ class TestSubtraction(unittest.TestCase):
     def test_two_numbers(self):
         self.assertEqual(self.mt.subtraction(10, 3), 7)
 
-    def test_more_than_two_numbers(self):
-        self.assertEqual(self.mt.subtraction(20, 5, 3, 2), 10)
-
     def test_negative_result(self):
         self.assertEqual(self.mt.subtraction(3, 10), -7)
 
@@ -63,9 +57,6 @@ class TestMultiplication(unittest.TestCase):
 
     def test_two_numbers(self):
         self.assertEqual(self.mt.multiplication(3, 4), 12)
-
-    def test_more_than_two_numbers(self):
-        self.assertEqual(self.mt.multiplication(2, 3, 4), 24)
 
     def test_multiply_by_zero(self):
         self.assertEqual(self.mt.multiplication(5, 0), 0)
@@ -91,9 +82,6 @@ class TestDivision(unittest.TestCase):
 
     def test_two_numbers(self):
         self.assertEqual(self.mt.division(10, 2), 5.0)
-
-    def test_more_than_two_numbers(self):
-        self.assertEqual(self.mt.division(100, 5, 4), 5.0)
 
     def test_float_result(self):
         self.assertAlmostEqual(self.mt.division(7, 2), 3.5)
@@ -415,26 +403,26 @@ class TestSublistFactors(unittest.TestCase):
         self.mt = MathTools()
 
     def test_factors_of_12(self):
-        self.assertEqual(self.mt.sublistFactors(12), [1, 2, 3, 4, 6, 12])
+        self.assertEqual(self.mt.sublistFactors([], 12), [1, 2, 3, 4, 6, 12])
 
     def test_factors_of_prime(self):
-        self.assertEqual(self.mt.sublistFactors(7), [1, 7])
+        self.assertEqual(self.mt.sublistFactors([], 7), [1, 7])
 
     def test_factors_of_1(self):
-        self.assertEqual(self.mt.sublistFactors(1), [1])
+        self.assertEqual(self.mt.sublistFactors([], 1), [1])
 
     def test_factors_of_perfect_square(self):
-        self.assertEqual(self.mt.sublistFactors(16), [1, 2, 4, 8, 16])
+        self.assertEqual(self.mt.sublistFactors([], 16), [1, 2, 4, 8, 16])
 
     def test_factors_of_large_number(self):
-        self.assertEqual(self.mt.sublistFactors(100), [1, 2, 4, 5, 10, 20, 25, 50, 100])
+        self.assertEqual(self.mt.sublistFactors([], 100), [1, 2, 4, 5, 10, 20, 25, 50, 100])
 
     def test_factors_of_zero_returns_empty(self):
         # range(1, 1) is empty, so no factors are appended
-        self.assertEqual(self.mt.sublistFactors(0), [])
+        self.assertEqual(self.mt.sublistFactors([], 0), [])
 
     def test_stores_result_in_attribute(self):
-        self.mt.sublistFactors(6)
+        self.mt.sublistFactors([], 6)
         self.assertEqual(self.mt.numList, [1, 2, 3, 6])
 
 

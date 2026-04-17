@@ -31,83 +31,70 @@ class MathToolsStudent:
         self.quotient = 0
         self.factorList = []
 
-    def addition(self, a, b, *args):
+    def addition(self, a, b):
         '''
-        Adds two or more numbers together and stores the result in self.sum.
+        Adds a and b together and stores the result in self.sum.
 
         Parameters:
             a     (int/float) : the first number to add. Required.
             b     (int/float) : the second number to add. Required.
-            *args (int/float) : any number of additional values to add. Optional.
 
         Returns:
-            self.sum (int/float) : the sum of all provided values.
+            self.sum (int/float) : the sum of a + b
 
         Example:
             addition(3, 4)       -> returns 7,  self.sum = 7
-            addition(1, 2, 3, 4) -> returns 10, self.sum = 10
         '''
         pass
         #TODO: implement addition of two or more inputted values
 
-    def subtraction(self, a, b, *args):
+    def subtraction(self, a, b):
         '''
-        Subtracts b and any additional values from a, and stores the result in self.difference.
+        Subtracts b from a, and stores the result in self.difference.
 
         Parameters:
             a     (int/float) : the starting value to subtract from. Required.
             b     (int/float) : the first value to subtract. Required.
-            *args (int/float) : any number of additional values to subtract. Optional.
 
         Returns:
-            self.difference (int/float) : the result of a - b - args[0] - args[1] - ...
+            self.difference (int/float) : the difference of a - b
 
         Example:
             subtraction(10, 3)       -> returns 7,  self.difference = 7
-            subtraction(20, 5, 3, 2) -> returns 10, self.difference = 10
         '''
         pass
         #TODO: implement subtraction of two or more inputted values
 
-    def multiplication(self, a, b, *args):
+    def multiplication(self, a, b):
         '''
-        Multiplies two or more numbers together and stores the result in self.product.
+        Multiplies a and b and stores the result in self.product.
 
         Parameters:
             a     (int/float) : the first number to multiply. Required.
             b     (int/float) : the second number to multiply. Required.
-            *args (int/float) : any number of additional values to multiply. Optional.
 
         Returns:
-            self.product (int/float) : the product of all provided values.
+            self.product (int/float) : the product of a * b
 
         Example:
             multiplication(3, 4)    -> returns 12, self.product = 12
-            multiplication(2, 3, 4) -> returns 24, self.product = 24
         '''
         pass
         #TODO: implement multiplication of two or more inputted values
 
-    def division(self, a, b, *args):
+    def division(self, a, b):
         '''
-        Divides a by b and any additional values, and stores the result in self.quotient.
-        Raises ZeroDivisionError if any divisor is 0.
+        Divides a by b and stores the result in self.quotient.
 
         Parameters:
             a     (int/float) : the numerator (value to be divided). Required.
             b     (int/float) : the first divisor. Required. Must not be 0.
-            *args (int/float) : any number of additional divisors. Optional. Must not be 0.
 
         Returns:
-            self.quotient (float) : the result of a / b / args[0] / args[1] / ...
-
-        Raises:
-            ZeroDivisionError : if b or any value in args is 0.
+            self.quotient (float) : the quotient of a / b
 
         Example:
             division(10, 2)       -> returns 5.0,  self.quotient = 5.0
-            division(100, 5, 4)   -> returns 5.0,  self.quotient = 5.0
-            division(10, 0)       -> raises ZeroDivisionError
         '''
         pass
         #TODO: implement division of two or more inputted values
